@@ -1,5 +1,7 @@
 package com.example.genarkopong
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MyAdapter(private val imageList: List<Int>, private val textList: List<String>) :
+class MyAdapter(private val context: Context, private val imageList: List<Int>, private val textList: List<String>) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -23,6 +25,13 @@ class MyAdapter(private val imageList: List<Int>, private val textList: List<Str
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.imageView.setImageResource(imageList[position])
         holder.textView.text = textList[position]
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, ItemDetailActivity::class.java)
+            intent.putExtra("image_resource", imageList[position])
+            intent.putExtra("text", textList[position])
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = imageList.size

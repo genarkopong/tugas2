@@ -33,7 +33,7 @@ class DetailActivity : AppCompatActivity() {
             "Gambar 7"
         )
 
-        val adapter = MyAdapter(imageList, textList)
+        val adapter = MyAdapter(this, imageList, textList) // Kirim 'this' sebagai context
         recyclerView.adapter = adapter
     }
 }
