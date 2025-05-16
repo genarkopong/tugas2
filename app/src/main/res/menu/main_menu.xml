@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_about"
+            android:title="About" />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_separator"
+                android:enabled="false"
+                android:title="">
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/textColorSecondary"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:alpha="0.5"/>
+            </item>
+            <item
+                android:id="@+id/nav_app_version"
+                android:title="Versi 1.0"
+                android:enabled="false" />
+        </menu>
+    </item>
+
+</menu>

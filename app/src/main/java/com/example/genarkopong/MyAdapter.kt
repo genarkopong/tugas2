@@ -9,8 +9,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MyAdapter(private val context: Context, private val imageList: List<Int>, private val textList: List<String>) :
-    RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(
+    private val context: Context,
+    private val imageList: List<Int>,
+    private val textList: List<String>,
+    private val descriptionList: List<String>
+) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.imageViewCard)
@@ -30,6 +34,7 @@ class MyAdapter(private val context: Context, private val imageList: List<Int>, 
             val intent = Intent(context, ItemDetailActivity::class.java)
             intent.putExtra("image_resource", imageList[position])
             intent.putExtra("text", textList[position])
+            intent.putExtra("description", descriptionList[position])
             context.startActivity(intent)
         }
     }

@@ -25,18 +25,18 @@ class ItemDetailActivity : AppCompatActivity() {
             insets
         }
 
-        // Mendapatkan data dari Intent
+
         val intent = intent
         if (intent != null) {
             val imageResource = intent.getIntExtra("image_resource", 0)
             val title = intent.getStringExtra("text")
-            val description = intent.getStringExtra("description") // Jika Anda mengirim deskripsi
+            val description = intent.getStringExtra("description")
 
-            // Menetapkan data ke tampilan
+
             imageViewDetail.setImageResource(imageResource)
             textViewDetailTitle.text = title
 
-            // Jika ada deskripsi, tetapkan juga
+
             description?.let {
                 textViewDetailDescription?.text = it
             }

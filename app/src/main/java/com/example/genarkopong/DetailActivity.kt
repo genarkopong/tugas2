@@ -14,26 +14,36 @@ class DetailActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val imageList = listOf(
-            R.drawable.images, // Ganti dengan resource gambar Anda
-            R.drawable.images,
-            R.drawable.images,
-            R.drawable.images,
-            R.drawable.images,
-            R.drawable.images,
-            R.drawable.images
+            R.drawable.img,
+            R.drawable.senegal,
+            R.drawable.argentina,
+            R.drawable.francis,
+            R.drawable.img_1,
+            R.drawable.img_2,
+            R.drawable.img_3
         )
 
         val textList = listOf(
-            "Gambar 1",
-            "Gambar 2",
-            "Gambar 3",
-            "Gambar 4",
-            "Gambar 5",
-            "Gambar 6",
-            "Gambar 7"
+            "Netherland",
+            "Senegal",
+            "Argentina",
+            "France",
+            "Switzerland",
+            "Croatia",
+            "Cuba"
         )
 
-        val adapter = MyAdapter(this, imageList, textList) // Kirim 'this' sebagai context
+        val descriptionList = listOf(
+            "Belanda, dikenal dengan kincir angin dan bunga tulipnya.",
+            "Senegal, negara di Afrika Barat dengan budaya yang kaya.",
+            "Argentina, terkenal dengan sepak bolanya dan tarian tango.",
+            "Prancis, rumah bagi Menara Eiffel dan masakan yang lezat.",
+            "Swiss, terkenal dengan pegunungan Alpen dan cokelatnya.",
+            "Kroasia, memiliki garis pantai yang indah di Laut Adriatik.",
+            "Kuba, pulau Karibia dengan musik salsa dan mobil klasik."
+        )
+
+        val adapter = MyAdapter(this, imageList, textList, descriptionList)
         recyclerView.adapter = adapter
     }
 }

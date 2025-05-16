@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context="com.example.genarkopong.LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/black"
+        android:background="@color/colorBackground"
         android:padding="16dp"
         tools:context=".LoginActivity"
         tools:ignore="MissingConstraints">
@@ -22,28 +23,10 @@
             android:text="Selamat Datang"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:textColor="#FFD700"
+            android:textColor="@color/colorAccent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="32dp"/>
-
-        <EditText
-            android:id="@+id/editTextTextPassword"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:drawablePadding="8dp"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/darker_gray"
-            android:background="@color/cardview_dark_background"
-            app:layout_constraintTop_toBottomOf="@+id/textView1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.8"
             android:layout_marginTop="32dp"/>
 
         <EditText
@@ -55,10 +38,28 @@
             android:hint="Username"
             android:inputType="text"
             android:padding="12dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/darker_gray"
-            android:background="@color/cardview_dark_background"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+            android:textColor="@color/textColorPrimary"
+            android:textColorHint="@color/textColorSecondary"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/textView1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="32dp"/>
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@color/textColorPrimary"
+            android:textColorHint="@color/textColorSecondary"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextUsername"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintWidth_percent="0.8"
@@ -69,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextUsername"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp">
@@ -81,7 +82,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
                 android:text="daftar"
-                android:textColor="#FFD700"
+                android:textColor="@color/colorAccent"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -90,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="lupa password"
-                android:textColor="#FFD700"
+                android:textColor="@color/colorAccent"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 android:textStyle="bold"
@@ -103,10 +104,10 @@
             android:id="@+id/button4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@color/design_default_color_on_secondary"
+            android:backgroundTint="@color/colorAccent"
             android:padding="12dp"
             android:text="Login"
-            android:textColor="@android:color/black"
+            android:textColor="@color/textColorPrimary"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
